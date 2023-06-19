@@ -54,8 +54,8 @@ while url:
             single_opinion = {}
             for key, value in selectors.items():
                 single_opinion[key] = get_element(opinion, *value)
-            single_opinion['opinion_id']= int(single_opinion["opinion_id"])
-            single_opinion['recommendation'] = True if single_opinion['recommendation'] == "Polecam" else False if single_opinion['recommendation'] == "Nie polecam" else None
+            single_opinion['id']= int(single_opinion["id"])
+            single_opinion['recomendation'] = True if single_opinion['recomendation'] == "Polecam" else False if single_opinion['recomendation'] == "Nie polecam" else None
             single_opinion['stars'] = float(single_opinion['stars'].split("/")[0].replace(",","."))
             single_opinion['upvote'] = int(single_opinion['upvote'])
             single_opinion['downvote'] = int(single_opinion['downvote'])
